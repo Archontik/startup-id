@@ -1,0 +1,50 @@
+.card {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 152px 24px 48px;
+	max-width: 352px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	border-radius: 12px;
+	background: $whiteColor;
+	box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 48px;
+		left: calc(50% - 36px);
+		width: 72px;
+		height: 72px;
+
+		background: url("../../images/icon-arrow.svg") center no-repeat;
+	}
+
+	&:hover {
+		box-shadow: 0px 4px 30px 0px rgba(67, 116, 229, 0.40);
+
+		&::before {
+			filter: invert(40%) sepia(95%) saturate(548%) hue-rotate(187deg) brightness(93%) contrast(94%);
+		}
+	}
+
+	&__title {
+		color: $blackColor;
+		font-size: 32px;
+		font-weight: 700;
+	}
+
+	&__desc {
+		margin: 16px 0 0;
+
+		color: #222;
+		text-align: center;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
